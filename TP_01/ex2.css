@@ -1,0 +1,19 @@
+.row-wrapper{
+    height: 90%;
+    border:2px solid grey;
+    background-color:#555;
+    display:flex;
+    padding:2%;
+    gap: 15px;
+}
+.column-wrapper{
+    width: 40%;
+    height: 40%;
+}
+.box {
+    text-align:center;
+    padding:5%;
+    background-color:yellow;
+    /*white-space: pre-line;*/
+    /*justify-content: flex-start;*/
+}

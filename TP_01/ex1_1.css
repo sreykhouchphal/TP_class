@@ -1,0 +1,22 @@
+.wrapper{
+    height: 40%;
+    background-color:#ff9b00;
+    padding: 15%;
+   
+  }
+  .flying-box{
+      height:50%;
+      background-color:yellow;
+      align-content: center ;
+      justify-content: center;
+      display:flex;
+     
+  }
+  p{
+    font-size:5em;
+    text-align:center;
+    padding:10%;
+    color: grey;
+  }
+  
+  

@@ -1,0 +1,14 @@
+*{
+    margin: 0;
+}
+.wrapper{
+    background-color: rgb(182, 176, 176);
+    height: 100vh;
+    padding: 10px;
+}
+.content{
+    width: clamp(300px, 100%, 800px);
+    /*clamp(MIN, VAL, MAX) is resolved as max()(MIN, min()(VAL, MAX))*/
+    height: 100vh; 
+    background-color: rgb(241, 221, 104);
+}

@@ -1,0 +1,16 @@
+*{
+    margin: 0;
+}
+.header{
+    background-color: rgb(182, 186, 189);
+    text-align: center;
+    padding: 20px;
+    font-size: 40px;
+}
+.content{
+    padding-left: 20px;
+    height:100vh;
+    overflow-y:scroll;
+    /* overflow-y property specifies whether to clip the content, add a scroll bar, or display 
+    overflow content of a block-level element, when it overflows at the top and bottom edges.*/
+}

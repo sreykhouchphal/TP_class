@@ -1,0 +1,21 @@
+.wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.drop {
+    position: relative;
+    animation: drop 1s infinite;
+    /*use to drop anima in one second*/
+    animation-delay: calc(var(--order) * 100ms);
+    /*It is used to define a time before the animation starts. */
+    /*The value passed is in seconds or ms*/
+    font-size: 3rem;
+    background-color:rgb(207, 205, 205);
+}
+@keyframes drop {
+    /*@keyframes is rule specifies the animation code.*/
+    from {top: 0px;}
+    to {top: 300px;}
+}

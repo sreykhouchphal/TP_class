@@ -1,0 +1,15 @@
+.grid{
+    height: 90%;
+    border:2px solid grey;
+    background-color:#555;
+    display:grid;
+    grid-template-columns: auto auto auto; /* property defines the line names and 
+    track sizing functions of the grid columns.*/
+    padding:2%;
+    gap: 20px;
+}
+.box{
+    text-align:center;
+    padding:10%;
+    background-color:yellow;
+}
