@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video to Canvas</title>
+    <link rel="stylesheet" href="./canvasEx2.css">
+</head>
+<body>
+  <!-- Stream video via webcam -->
+  <div class="video-wrap">
+      <video id="video" playsinline autoplay> </video>
+  <!--  Trigger canvas web -->
+  <div class="controller">
+    <div>Canvas 👻: Show your face please!</div>
+    <button id="snap">Pause</button>
+  </div>
+  </div>
+  <!-- Webcam video snapshot-->
+  <canvas id="canvas" width="640" height="480" ></canvas>
+      <script>
+        const video = document.getElementById('video');
+        const canvas = document.getElementById('canvas');
+        const snap = document.getElementById('snap');
+        const errorMsgElement = document.getElementById('spanErrorMsg');
+        /** Access camera **/
+        navigator.mediaDevices.getUserMedia({
+            audio: false,
+            video: true
+        })
+        .then((stream)=>{
+            video.srcObject = stream;
+        })
+        .catch((err)=>{
+            console.log('navigator.MediaDevices.getUserMedia error: ',err.message,err.name);
+        });
+        (function loop(){
+            if(playing){
+                canvas.getContext('2d').drawImage(video,0,0,canvas.width,canvas.height);
+                setTimeOut(loop,100/30); //drawing at 30fps
+            }
+        })();
+       // Draw image
+       var context = canvas.getContext('2d');
+       snap.addEventListener("click",function(){
+           context.drwImage(video,0,0,500,500)
+       })
+         
+       </script>
+
+</body>
+</html>
